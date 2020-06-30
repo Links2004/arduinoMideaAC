@@ -36,6 +36,7 @@ void acSerial::request_status() {
 }
 
 void acSerial::print_conf(ac_conf_t * conf) {
+#ifdef AC_DEBUG_PORT
     AC_DEBUG_PORT.printf("on: %d\n", conf->on);
     AC_DEBUG_PORT.printf("soll: %d\n", conf->soll);
     AC_DEBUG_PORT.printf("fan: %d\n", conf->fan);
@@ -43,17 +44,21 @@ void acSerial::print_conf(ac_conf_t * conf) {
     AC_DEBUG_PORT.printf("lamelle: %d\n", conf->lamelle);
     AC_DEBUG_PORT.printf("turbo: %d\n", conf->turbo);
     AC_DEBUG_PORT.printf("eco: %d\n", conf->eco);
+#endif
 }
 
 void acSerial::print_status(ac_status_t * status) {
+#ifdef AC_DEBUG_PORT
     print_conf(&(status->conf));
     AC_DEBUG_PORT.print("ist: ");
     AC_DEBUG_PORT.println(status->ist);
     AC_DEBUG_PORT.print("aussen: ");
     AC_DEBUG_PORT.println(status->aussen);
+#endif
 }
 
 void acSerial::send_conf_h(bool on, uint8_t soll, uint8_t fan, ac_mode_t mode, bool lamelle, bool turbo, bool eco) {
+#ifdef AC_DEBUG_PORT
     AC_DEBUG_PORT.printf("on: %d\n", on);
     if(on) {
         AC_DEBUG_PORT.printf("soll: %d\n", soll);
@@ -63,6 +68,7 @@ void acSerial::send_conf_h(bool on, uint8_t soll, uint8_t fan, ac_mode_t mode, b
         AC_DEBUG_PORT.printf("turbo: %d\n", turbo);
         AC_DEBUG_PORT.printf("eco: %d\n", eco);
     }
+#endif
     ac_conf_t conf;
 
     switch(fan) {
@@ -173,7 +179,9 @@ bool acSerial::write_raw(uint8_t * data, uint8_t len) {
         unsigned long start = millis();
         while(_s->available() < 3) {
             if(millis() - start >= 1000) {
+#ifdef AC_DEBUG_PORT
                 AC_DEBUG_PORT.println("no Answer to write\n");
+#endif
                 return false;
             }
         }
@@ -205,7 +213,9 @@ void acSerial::loop() {
             _buf[0]    = header;
             _buf[1]    = _needBytes + 1;
             if(!_buf) {
+#ifdef AC_DEBUG_PORT
                 AC_DEBUG_PORT.println("mallocFail");
+#endif
                 _needBytes = 0;
                 return;
             }

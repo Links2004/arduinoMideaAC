@@ -9,8 +9,6 @@
 #ifndef AC_DEBUG_PORT
 #ifdef DEBUG_ESP_PORT
 #define AC_DEBUG_PORT DEBUG_ESP_PORT
-#else
-#define AC_DEBUG_PORT Serial1
 #endif
 #endif
 
