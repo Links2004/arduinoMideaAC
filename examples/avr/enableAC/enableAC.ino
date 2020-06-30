@@ -9,7 +9,7 @@ acSerial s1;
 #define USE_SERIAL Serial1
 
 void ACevent(ac_status_t * status) {
-    USE_SERIAL.printf("[ACevent] ----------------------------\n");
+    USE_SERIAL.println("[ACevent] ----------------------------");
     s1.print_status(status);
 }
 
@@ -22,7 +22,7 @@ void setup() {
     USE_SERIAL.println();
 
     for(uint8_t t = 4; t > 0; t--) {
-        USE_SERIAL.printf("[SETUP] BOOT WAIT %d...\n", t);
+        USE_SERIAL.println("[SETUP] BOOT WAIT ...",);
         USE_SERIAL.flush();
         delay(1000);
     }
