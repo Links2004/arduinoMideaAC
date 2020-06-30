@@ -1,0 +1,25 @@
+{
+    "name": "MideaAC",
+    "description": "hack job for decoding and sending Midea AC Serial commands",
+    "keywords": "Serial, AC, Midea, air condition",
+    "authors": [
+        {
+            "name": "Markus Sattler",
+            "url": "https://github.com/Links2004",
+            "maintainer": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Links2004/arduinoMideaAC.git"
+    },
+    "version": "0.0.1",
+    "license": "LGPL-2.1",
+    "export": {
+        "exclude": [
+            "tests"
+        ]
+    },
+    "frameworks": "arduino",
+    "platforms": "atmelavr, espressif8266, espressif32"
+}

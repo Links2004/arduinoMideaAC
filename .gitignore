@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# IDE
+.vscode
+.cproject
+.project
+.settings
+*.swp
+.pioenvs
+
