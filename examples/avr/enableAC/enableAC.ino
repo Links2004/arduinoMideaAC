@@ -22,7 +22,7 @@ void setup() {
     USE_SERIAL.println();
 
     for(uint8_t t = 4; t > 0; t--) {
-        USE_SERIAL.println("[SETUP] BOOT WAIT ...",);
+        USE_SERIAL.println("[SETUP] BOOT WAIT ...");
         USE_SERIAL.flush();
         delay(1000);
     }
