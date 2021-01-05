@@ -1,4 +1,4 @@
-arduinoMideaAC [![Build Status](https://travis-ci.com/Links2004/arduinoMideaAC.svg?branch=master)](https://travis-ci.com/Links2004/arduinoMideaAC)
+arduinoMideaAC [![Build Status](https://github.com/Links2004/arduinoMideaAC/workflows/CI/badge.svg?branch=master)](https://github.com/Links2004/arduinoMideaAC/actions?query=workflow%3ACI+branch%3Amaster)
 ===========================================
 
 hack job for decoding and sending Midea AC Serial commands
