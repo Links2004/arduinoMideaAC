@@ -150,7 +150,7 @@ jobs:
 
       - name: copy code
         run: |
-          cp -r $GITHUB_WORKSPACE $HOME/Arduino/libraries/arduinoWebSockets
+          cp -r $GITHUB_WORKSPACE $HOME/Arduino/libraries/arduinoMideaAC
       
       - name: config IDE
         run: |
@@ -161,6 +161,7 @@ jobs:
           arduino --pref update.check=false
 
       - name: build example
+        timeout-minutes: 20
         run: |
           export DISPLAY=:1.0
           export PATH="$HOME/arduino_ide:$PATH"
