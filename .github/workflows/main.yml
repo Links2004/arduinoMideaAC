@@ -150,6 +150,7 @@ jobs:
 
       - name: copy code
         run: |
+          mkdir -p $HOME/Arduino/libraries/
           cp -r $GITHUB_WORKSPACE $HOME/Arduino/libraries/arduinoMideaAC
       
       - name: config IDE
