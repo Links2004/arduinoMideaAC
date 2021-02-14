@@ -87,6 +87,12 @@ jobs:
           unzip 6.x.zip
           mv ArduinoJson-6.x $HOME/Arduino/libraries/ArduinoJson
 
+      - name: download pubsubclient
+        if: steps.cache_all.outputs.cache-hit != 'true'
+        run: |
+          source $GITHUB_WORKSPACE/travis/common.sh
+          clone_library https://github.com/knolleary/pubsubclient
+
       - name: download esp8266
         if: steps.cache_all.outputs.cache-hit != 'true'
         run: |
