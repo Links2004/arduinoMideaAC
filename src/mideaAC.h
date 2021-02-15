@@ -3,6 +3,10 @@
 
 #include <Arduino.h>
 
+#ifndef __AVR__
+#include <functional>
+#endif
+
 //#define AC_DEBUG_PORT DEBUG_ESP_PORT
 //#define AC_DEBUG_RAW
 

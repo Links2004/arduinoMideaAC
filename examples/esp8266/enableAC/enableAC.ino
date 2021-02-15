@@ -4,7 +4,7 @@
 acSerial s1;
 
 // AC connection on Serial
-// debug output on Serial1 
+// debug output on Serial1
 
 #define USE_SERIAL Serial1
 
