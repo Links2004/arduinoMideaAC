@@ -8,6 +8,7 @@ hack job for decoding and sending Midea AC Serial commands
 Tested with:
 
  - ESP8266
+ - ESP32
  - ATmega 2560
 
 
