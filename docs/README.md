@@ -7,8 +7,8 @@
 
 ## Build
 
-[![Front](./img/front.jpg =400x)](./img/front.jpg)
-[![Back](./img/back.jpg =400x)](./img/back.jpg)
+[<img src="./img/front.jpg" alt="" width="40%" />](./img/front.jpg)
+[<img src="./img/back.jpg" alt="" width="40%" />](./img/back.jpg)
 
 ## Installed
-[![Back](./img/installed.jpg  =1080x)](./img/installed.jpg)
+[<img src="./img/installed.jpg" alt="" width="1080" />](./img/installed.jpg)
