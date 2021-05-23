@@ -17,4 +17,4 @@ Tested with:
 The "USB" port on the air condition is no USB port its a Serial port with a USB connector (5V, RX, TX, GND)
 for use with ESP8266 a level shifter and 3V3 LDO is needed.
 
-
+See: [docs/README.md](docs/README.md)
